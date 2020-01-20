@@ -1,0 +1,53 @@
+.msg {
+  position: relative;
+  text-align: center;
+  font-family: sans-serif;
+  color: indianred;
+  top: 200px;
+}
+
+.btn1 {
+  font-size: 18px;
+  color: aliceblue;
+  letter-spacing: 2px;
+  margin: 5px;
+  padding: 7px 28px;
+  text-decoration: none;
+  border: 1px solid lemonchiffon;
+  border-radius: 25px;
+  outline: none;
+}
+
+.btn1:hover {
+  background: coral;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+.jumbotron {
+  margin-top: 10px;
+}
+
+p {
+  padding: 10px;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn1Info,
+.btn2Info,
+.btn3Info,
+.btn4Info,
+.btn5Info,
+.btn6Info {
+  display: none;
+  /* outline: none; */
+}
+
+.onHover {
+  pointer-events: none;
+}

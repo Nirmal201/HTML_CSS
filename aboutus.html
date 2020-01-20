@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>About Us</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+  <script src="./jQuery-Captcha-master/captcha.jquery.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Grenze&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #81c644;
+    }
+
+    .wrapper1 {
+      font-family: 'Grenze', serif;
+      margin-top: 10%;
+    }
+
+    .wrapper1 h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 52px;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    .team {
+      display: flex;
+      text-align: center;
+      width: auto;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .team .team_member {
+      background: #fff;
+      margin: 5px;
+      margin-bottom: 50px;
+      width: 300px;
+      padding: 20px;
+      line-height: 20px;
+      color: #8e8b8b;
+      position: relative;
+    }
+
+    .team .team_member h3 {
+      color: #2c5707;
+      font-size: 26px;
+      margin-top: 50px;
+    }
+
+    .team .team_member p.role {
+      color: rgb(231, 26, 26);
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+
+    .team .team_member .proIMG {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: -50px;
+      border-radius: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+    }
+
+    .team .team_member .proIMG img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      padding: 10px;
+    }
+
+    header {
+      /* position: absolute; */
+      z-index: 10;
+      width: 100%;
+    }
+
+    .navbar {
+      padding: 10px 80px;
+    }
+
+    .navbar-brand {
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 2rem;
+      color: #262626;
+    }
+
+    .nav-item {
+      font-weight: 400;
+    }
+
+    .navbar-light .navbar-nav .nav-item .nav-link:hover,
+    .navbar-light .navbar-nav .nav-item.active .nav-link {
+      background: #262626;
+      color: #ffffff;
+    }
+
+    .navbar-light .navbar-nav .nav-item .nav-link {
+      color: #262626;
+      padding: 15px;
+    }
+
+    .banner {
+      /* position: relative; */
+      background: url('./one.jpeg');
+      min-height: 100vh;
+      background-size: cover;
+      background-position: center;
+      padding: 250px 0 200px;
+    }
+
+    .banner h2 {
+      margin: 0;
+      padding: 0;
+      font-size: 2.8em;
+      font-weight: 900;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .banner p {
+      margin: 0;
+      padding: 0;
+      font-size: 1.2em;
+      line-height: 1.5em;
+      font-weight: 200;
+      color: #ffffff;
+    }
+
+    .btn1:hover {
+      outline: none;
+      text-decoration: none;
+      color: black;
+    }
+
+    #accordion {
+      margin: 200px auto;
+      width: 80%;
+      color: black;
+    }
+
+    .b1 {
+      background: #958b8b;
+      color: black;
+      cursor: pointer;
+      border: 0px;
+      padding: 18px;
+      text-align: left;
+      font-size: 18px;
+      transition: 0.4s;
+    }
+
+    .panel {
+      background: rgb(44, 40, 40);
+      padding: 0 18px;
+      color: #fff;
+      max-height: 100px;
+      overflow: hidden;
+      margin: 0 auto;
+      transition: max-height 0.2s ease-out;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar  -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Let's tour</a> <i class="fas fa-car" style="font-size: 300%"></i>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-lg-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Our Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="services.html">Services</a>
+
+            </div>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Showroom</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="./Services/index.html">Our Services</a></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="contactus.html" tabindex="-1" aria-disabled="true">Contact Us</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link " href="login.html" tabindex="-1" aria-disabled="true">Login</a>
+          </li> -->
+
+          <li class="nav-item">
+            <a class="nav-link " href="signup.html" tabindex="-1" aria-disabled="true">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Navbar End -->
+  <div class="wrapper1">
+    <h1>Our Team</h1>
+    <div class="team">
+      <div class="team_member">
+        <div class="proIMG">
+          <img src="IMG_1078.jpg" alt="">
+        </div>
+        <h3>Nirmal Patel</h3>
+        <p class="role">CEO</p>
+        <p>The Founder and CEO of the "Lets Ride". He started the company in the year of 2017. </p>
+      </div>
+
+      <div class="team_member">
+        <div class="proIMG">
+          <img src="IMG_445E09B5175B-1.jpeg" alt="">
+        </div>
+        <h3>Akash Rabari</h3>
+        <p class="role">UX Designer</p>
+        <p> He has been Constantly looking for improving the User experience and improving design.One of the best
+          designer we have in the team</p>
+      </div>
+
+      <div class="team_member">
+        <div class="proIMG">
+          <img src="arsh.jpeg" alt="">
+        </div>
+        <h3>Arshdeep Kaur</h3>
+        <p class="role">Front End Developer</p>
+        <p>She is our Senior Front End Developer. She is responsible for handling our site.</p>
+      </div>
+
+      <div class="team_member">
+        <div class="proIMG">
+          <img src="har.jpeg" alt="">
+        </div>
+        <h3>Harpreet Kaur</h3>
+        <p class="role">Product Designer</p>
+        <p>She has been in the from the beginning and has been designing our product.</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

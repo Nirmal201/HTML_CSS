@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="stylesheet" href="./contactUs.css">
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.form1').captcha();
+      $('button').click(function () {
+        if (!verifyCaptcha('.form1')) {
+          alert('Please click the captcha!');
+        }
+      });
+    });</script>
+  <style>
+    body {
+      background: #8e9eab;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #eef2f3, #8e9eab);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    form {
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    header {
+      /* position: absolute; */
+      z-index: 10;
+      width: 100%;
+    }
+
+    .container {
+      margin: auto;
+
+    }
+
+    .navbar {
+      padding: 10px 80px;
+    }
+
+    .navbar-brand {
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 2rem;
+      color: #262626;
+    }
+
+    .nav-item {
+      font-weight: 400;
+    }
+
+    .navbar-light .navbar-nav .nav-item .nav-link:hover,
+    .navbar-light .navbar-nav .nav-item.active .nav-link {
+      background: #262626;
+      color: #ffffff;
+    }
+
+    .navbar-light .navbar-nav .nav-item .nav-link {
+      color: #262626;
+      padding: 15px;
+    }
+
+    .ctn {
+      text-align: center;
+    }
+
+    .main-form {
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    hr {
+      height: 7px;
+      color: black;
+      background-color: black;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar  -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Let's tour</a> <i class="fas fa-car" style="font-size: 300%"></i>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-lg-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+    
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Showroom</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Services/index.html">Our Services</a></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " href="contactus.html" tabindex="-1" aria-disabled="true">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="login.html" tabindex="-1" aria-disabled="true">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Navbar End -->
+
+  <div class="container">
+    <h1 class="ctn">Fill the Information</h1>
+    <p class="ctn">Please enter your information here to register with our website</p>
+    <hr>
+    <div class="main-form">
+      <form id="main" action="index.html" method="GET">
+        <div class="form-group">
+          <label for="Username">User name:</label> <span class="star">*</span>
+          <input class="form-control" id="Username" type="Username" name="Username" placeholder="Username"
+            style="width:400px" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email ID:</label> <span class="star">*</span>
+          <input class="form-control" id="email" type="email" name="email" placeholder="Email" style="width:400px"
+            required />
+        </div>
+
+        <!-- id="email" -->
+        <div class="form-group">
+          <label for="Re_EmailID">Re_Enter Email ID:</label>
+          <span class="star">*</span>
+          <input class="form-control" id="remail" type="email" name="Re_EmailID" placeholder="Re_EmailID"
+            style="width:400px" required />
+        </div>
+        <!-- id="Re_EmailID" -->
+        <div class="form-group">
+          <label for="password">Password:</label> <span class="star">*</span>
+          <input class="form-control" id="password" type="password" name="password" placeholder="Password" minlength="5"
+            style="width:400px" required />
+        </div>
+
+        <div class="form-group">
+          <label for="re-password">Re_Enter Password:</label>
+          <span class="star">*</span>
+          <input class="form-control" id="re-password" type="password" name="passwordConfirm"
+            placeholder="Re_Enter Password" style="width:400px" minlength="5" required />
+        </div>
+        <div class="form-group">
+          <label for="PhoneNumber">Phone Number:</label>
+          <span class="star">*</span>
+          <input class="form-control" id="PhoneNumber" type="PhoneNumber" name="PhoneNumber" placeholder="PhoneNumber"
+            style="width:400px" minlength="10" required />
+        </div>
+
+        <div class="form-group">
+          <p>
+            By Creating an account you accept terms and condition
+          </p>
+          <a href="#" class="btn-link">Terms and Privacy</a>
+        </div>
+        <input class="btn btn-primary btn-block" id="registerbtn" type="submit" value="Register"
+          onClick="return checkform()" style="width:400px" /><br />
+
+        Already have an account?<a href="login.html" class="signin btn-link">Login In</a>
+      </form>
+
+    </div>
+    <hr>
+  </div>
+
+  <script>
+    function checkform() {
+      var form1 = document.getElementById('main');
+      // var form2 = document.getElementById('main');
+      if ((form1.password.value != form1.passwordConfirm.value) || (form1.email.value != form1.Re_EmailID.value)) {
+        alert("Passwords or email must be the same");
+        form1.password.focus();
+        form1.email.focus();
+        return false;
+      }
+      return true;
+
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+  </div>
+</body>
+
+</html>

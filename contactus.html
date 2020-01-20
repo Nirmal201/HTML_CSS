@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+  <script src="./jQuery-Captcha-master/captcha.jquery.js"></script>
+  <link rel="stylesheet" href="contactUs.css">
+  <link rel="stylesheet" href="./jQuery-Captcha-master/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+  <script>
+    $(document).ready(function () {
+      $('.form1').captcha();
+      $('button').click(function () {
+        if (!verifyCaptcha('.form1')) {
+          alert('Please click the captcha!');
+        }
+      });
+    });</script>
+  <style>
+    header {
+      /* position: absolute; */
+      z-index: 10;
+      width: 100%;
+    }
+
+    .navbar {
+      padding: 10px 80px;
+    }
+
+    .navbar-brand {
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 2rem;
+      color: #262626;
+    }
+
+    .nav-item {
+      font-weight: 400;
+    }
+
+    .navbar-light .navbar-nav .nav-item .nav-link:hover,
+    .navbar-light .navbar-nav .nav-item.active .nav-link {
+      background: #262626;
+      color: #ffffff;
+    }
+
+    .navbar-light .navbar-nav .nav-item .nav-link {
+      color: #262626;
+      padding: 15px;
+    }
+
+    .banner {
+      /* position: relative; */
+      background: url('./one.jpeg');
+      min-height: 100vh;
+      background-size: cover;
+      background-position: center;
+      padding: 250px 0 200px;
+    }
+
+    .banner h2 {
+      margin: 0;
+      padding: 0;
+      font-size: 2.8em;
+      font-weight: 900;
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+
+    .banner p {
+      margin: 0;
+      padding: 0;
+      font-size: 1.2em;
+      line-height: 1.5em;
+      font-weight: 200;
+      color: #ffffff;
+    }
+
+    .btn1:hover {
+      outline: none;
+      text-decoration: none;
+      color: black;
+    }
+
+    #accordion {
+      margin: 200px auto;
+      width: 80%;
+      color: black;
+    }
+
+    .b1 {
+      background: #958b8b;
+      color: black;
+      cursor: pointer;
+      border: 0px;
+      padding: 18px;
+      text-align: left;
+      font-size: 18px;
+      transition: 0.4s;
+    }
+
+    .panel {
+      background: rgb(44, 40, 40);
+      padding: 0 18px;
+      color: #fff;
+      max-height: 100px;
+      overflow: hidden;
+      margin: 0 auto;
+      transition: max-height 0.2s ease-out;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar  -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Let's tour</a> <i class="fas fa-car" style="font-size: 300%"></i>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-lg-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Our Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="services.html">Services</a>
+
+            </div>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Showroom</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Services/index.html">Our Services</a></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="login.html" tabindex="-1" aria-disabled="true">Login</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " href="signup.html" tabindex="-1" aria-disabled="true">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Navbar End -->
+
+
+</body>
+<div class="container">
+  <form class="form1" action="thanks.html">
+    <div class="contact-us">
+      <div class="title">
+        <h1>Contact us</h1>
+      </div>
+      <div class="form">
+        <div class="form-items">
+          <input type="text" class="input" placeholder="Name" required>
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="form-items">
+          <input type="text" class="input" placeholder="Email" required>
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="form-items">
+          <textarea class="input message" cols="30" rows="10" placeholder="Message....." required></textarea>
+        </div>
+      </div>
+      <div class="captcha"></div> <br>
+      <button class="btn">
+        Submit
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+  </form>
+</div>
+
+
+</html>
